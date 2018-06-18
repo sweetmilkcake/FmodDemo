@@ -8,39 +8,36 @@
 * Cmake配置
 * NDK相关知识
 
-## Screenshots
-![demo1](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/demo1.gif)
-
 ## Download
 https://github.com/sweetmilkcake/FmodDemo/releases
 
 ## Environment
 Android Studio 3.1.3 (确保可以编译NDK)
-![sdk_tools](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/sdk_tools.png)
+![sdk_tools](https://github.com/sweetmilkcake/FmodDemo/blob/master/Screenshots/sdk_tools.png)
 
 ## How to Port
 1. 创建一个新的项目，支持C++
-![c++support](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/c++support.png)
+![c++support](https://github.com/sweetmilkcake/FmodDemo/blob/master/Screenshots/c++support.png)
 
 2. 选择C++支持的版本和依赖库
-![c++14](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/c++14.png)
+![c++14](https://github.com/sweetmilkcake/FmodDemo/blob/master/Screenshots/c++14.png)
 
 3. 把api/lowlevel/lib中的文件拷贝到libs目录下
-![libs](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/libs.png)
+![libs](https://github.com/sweetmilkcake/FmodDemo/blob/master/Screenshots/libs.png)
 
 4. 右键Add As Libs，添加fmod.jar包支持
-![fmodjar](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/fmodjar.png)
+![fmodjar](https://github.com/sweetmilkcake/FmodDemo/blob/master/Screenshots/fmodjar.png)
 
 5. 把api/lowlevel/inc目录整个拷贝到cpp目录下
-![inc](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/inc.png)
-![inc_as](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/inc_as.png)
+![inc](https://github.com/sweetmilkcake/FmodDemo/blob/master/Screenshots/inc.png)
+![inc_as](https://github.com/sweetmilkcake/FmodDemo/blob/master/Screenshots/inc_as.png)
 
 6. 把api/lowlevel/examples/media目录下的所有文件拷贝到assets
-![media](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/media.png)
-![media_as](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/media_as.png)
+![media](https://github.com/sweetmilkcake/FmodDemo/blob/master/Screenshots/media.png)
+![media_as](https://github.com/sweetmilkcake/FmodDemo/blob/master/Screenshots/media_as.png)
 
 7. 配置Gradle文件
-![Gradle](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/Gradle.png)
+![Gradle](https://github.com/sweetmilkcake/FmodDemo/blob/master/Screenshots/Gradle.png)
 ```
 arguments "-DANDROID_STL=stlport_shared"
 ```
@@ -54,7 +51,7 @@ ndk {
 }
 ```
 根据libs中的ABI支持，添加到Gradle中，因为我所使用的NDK版本为R17，不再支持armeabi
-![libs](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/libs.png)
+![libs](https://github.com/sweetmilkcake/FmodDemo/blob/master/Screenshots/libs.png)
 >ABIs [armeabi] are not supported for platform. Supported ABIs are [armeabi-v7a, arm64-v8a, x86, x86_64].
 
 ```
@@ -169,17 +166,17 @@ target_link_libraries( # Specifies the target library.
 ```
 
 10. 替换MainActivity (把lowlevel中example的MainActivity.java替换到工程中)
-![mainactivity](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/mainactivity.png)
+![mainactivity](https://github.com/sweetmilkcake/FmodDemo/blob/master/Screenshots/mainactivity.png)
 
 11. 修正包名
 如果你当初用这个包名org/fmod/example创建工程，那么这一步可以跳过。
-![package](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/package.png)
-![jni](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/jni.png)
+![package](https://github.com/sweetmilkcake/FmodDemo/blob/master/Screenshots/package.png)
+![jni](https://github.com/sweetmilkcake/FmodDemo/blob/master/Screenshots/jni.png)
 >其实这里就是java代码和cpp代码的调用接口。
 
 12. 效果
 如果出现下面界面，那就表示移植成功
-![show](https://github.com/sweetmilkcake/IjkplayerDemo/blob/master/Screenshots/show.png)
+![show](https://github.com/sweetmilkcake/FmodDemo/blob/master/Screenshots/show.png)
 
 ## Thanks
 * https://www.fmod.com/
